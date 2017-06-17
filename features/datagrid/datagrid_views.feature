@@ -200,8 +200,9 @@ Feature: Datagrid views
     When I fill in the following information:
       | Default product grid view | With name |
     And I press the "Save" button
-    And I am on the products page
-    And I logout
+    Then I should not see the text "THERE ARE UNSAVED CHANGES."
+    And I should see the text "With name"
+    When I logout
     And I am logged in as "Mary"
     And I am on the products page
     And I filter by "category" with operator "unclassified" and value ""
