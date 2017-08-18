@@ -54,6 +54,9 @@ Akeneo\Component\Batch\Model\JobExecution:
             length: 255
             column: log_file
             nullable: true
+        rawParameters:
+            type: json_array
+            column: raw_parameters
     oneToMany:
         stepExecutions:
             targetEntity: Akeneo\Component\Batch\Model\StepExecution
